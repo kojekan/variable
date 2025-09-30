@@ -1,35 +1,25 @@
 export const exploreWorlds = [
   {
     id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    imgUrl: '/planet-01.jpg',
+    title: 'Beyond',
   },
   {
     id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    imgUrl: '/planet-02.jpg',
+    title: 'Atmosphere',
   },
   {
     id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: 'Hueco Mundo',
-  },
-  {
-    id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
-  },
-  {
-    id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    imgUrl: '/planet-03.jpg',
+    title: 'Inner',
   },
 ];
 
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading precaution to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  'Find an experience that suits you and you want to enter',
+  'Decide the profile that you prefer',
+  'Brewed freezing or warming? As yours',
 ];
 
 export const newFeatures = [

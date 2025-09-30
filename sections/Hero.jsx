@@ -15,18 +15,18 @@ const Hero = () => (
     >
       <div className="relative z-10 flex flex-col items-center justify-center">
         <motion.h1
-          variants={textVariant(1.1)}
+          variants={textVariant(1.2)}
           className={styles.heroHeading}
         >
-          Metadroid
+          XYZ
         </motion.h1>
         <motion.div
           variants={textVariant(1.2)}
           className="flex flex-row items-center justify-center"
         >
-          <h1 className={styles.heroHeading}> Ma</h1>
+          <h1 className={styles.heroHeading}> Deci</h1>
           <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}> Ness</h1>
+          <h1 className={styles.heroHeading}> ed</h1>
         </motion.div>
       </div>
 
@@ -36,7 +36,7 @@ const Hero = () => (
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] sm:-top-[20px] -top-[10px]" />
         <img
-          src="/cover.png"
+          src="/cover.jpg"
           alt="cover"
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
