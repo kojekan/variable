@@ -27,13 +27,13 @@ export const newFeatures = [
     imgUrl: '/vrpano.svg',
     title: 'A new world',
     subtitle:
-        'we have the latest update with new world for you to try never mind',
+        'we have the latest update with new brewing findings for you to try never mind',
   },
   {
     imgUrl: '/headset.svg',
-    title: 'More realistic',
+    title: '5th Wave',
     subtitle:
-        'In the latest update, your eyes are narrow, making the world more realistic than ever',
+        'In the latest wave, your eyes are narrow, making the brewing more wider than ever',
   },
 ];
 
