@@ -40,21 +40,21 @@ export const newFeatures = [
 export const insights = [
   {
     imgUrl: '/planet-06.png',
-    title: 'The launch of the Metaverse and be happy :)',
+    title: 'Blend shot for better espresso',
     subtitle:
-        'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+        'Mathematical model combine with the coffee snob that produce an extraordinary espresso shot for the newest wave of espresso.',
   },
   {
     imgUrl: '/planet-07.png',
-    title: '7 tips to easily master the madness of the Metaverse',
+    title: 'TDS control for better coffee',
     subtitle:
-        'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+        'DiFluid can be your partner to looking for a better brew more easier.',
   },
   {
     imgUrl: '/planet-08.png',
-    title: 'With one platform you can explore the whole world virtually',
+    title: 'Formula for the best Japanese Coffee',
     subtitle:
-        'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+        'At least for our team :).',
   },
 ];
 
