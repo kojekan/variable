@@ -10,6 +10,22 @@
   scroll-behavior: smooth;
 }
 
+/* Global grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows interaction with elements beneath */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 200px 200px; /* Repeats the 200x200px noise pattern */
+  opacity: 1; /* Adjust for desired intensity of the grain */
+  mix-blend-mode: overlay; /* Blends the grain with the content below */
+  z-index: 9999; /* Ensures the grain is on top of other content */
+}
+
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
@@ -17,7 +33,7 @@
     #BAB6AF 25%,
     #FF3B05 100%
   );
-  filter: blur(125px);
+  filter: blur(75px); /* Reduced from 125px */
 }
 
 .hero-gradient {
@@ -37,14 +53,14 @@
   right: 0px;
 
   background: #BAB6AF;
-  filter: blur(190px);
+  filter: blur(100px); /* Reduced from 190px */
 }
 
 .glassmorphism {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px); /* Reduced from 4px */
+  -webkit-backdrop-filter: blur(2px); /* Reduced from 4px */
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -56,7 +72,7 @@
   top: 5%;
 
   background: rgba(255, 59, 5, 0.35);
-  filter: blur(175px);
+  filter: blur(100px); /* Reduced from 175px */
   transform: rotate(-114.2deg);
 }
 
@@ -68,7 +84,7 @@
   top: 10%;
 
   background: rgba(51, 23, 20, 0.75);
-  filter: blur(200px);
+  filter: blur(120px); /* Reduced from 200px */
   transform: rotate(-53.13deg);
 }
 
@@ -88,7 +104,7 @@
   top: 0px;
 
   background: #BAB6AF;
-  filter: blur(175px);
+  filter: blur(100px); /* Reduced from 175px */
 }
 
 .footer-gradient {
@@ -99,5 +115,5 @@
   bottom: 0;
 
   background: #FF3B05;
-  filter: blur(150px);
+  filter: blur(80px); /* Reduced from 150px */
 }

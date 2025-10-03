@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ComposedChart, Bar } from 'recharts';
+import { Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ComposedChart } from 'recharts';
 import { fadeIn } from '../utils/motion';
 
 const RoastProfileChart = ({ roastData }) => {
@@ -26,7 +26,7 @@ const RoastProfileChart = ({ roastData }) => {
   return (
     <motion.div
       variants={fadeIn('up', 'spring', 0.5, 0.75)}
-      className="w-full h-80 bg-gray-900/50 rounded-lg p-4"
+      className="w-full h-80"
     >
       <h3 className="text-white text-lg font-semibold mb-4">Roast Profile</h3>
       <ResponsiveContainer width="100%" height="100%">
@@ -34,31 +34,31 @@ const RoastProfileChart = ({ roastData }) => {
           <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
           <XAxis
             dataKey="time"
-            stroke="#9CA3AF"
-            tick={{ fill: '#9CA3AF' }}
+            stroke="#FFFFFF" // Set XAxis line to white
+            tick={{ fill: '#FFFFFF' }} // Set XAxis ticks to white
           />
           {/* Primary Y-axis for BT and ET temperatures */}
           <YAxis
             yAxisId="temp"
-            stroke="#9CA3AF"
-            tick={{ fill: '#9CA3AF' }}
-            label={{ value: 'Temperature (°C)', angle: -90, position: 'insideLeft' }}
+            stroke="#FFFFFF" // Set YAxis line to white
+            tick={{ fill: '#FFFFFF' }} // Set YAxis ticks to white
+            label={{ value: 'Temperature (°C)', angle: -90, position: 'insideLeft', fill: '#FFFFFF' }} // Set YAxis label to white
           />
           {/* Secondary Y-axis for ROR */}
           <YAxis
             yAxisId="ror"
             orientation="right"
-            stroke="#10B981"
-            tick={{ fill: '#10B981' }}
-            label={{ value: 'ROR (°C/min)', angle: 90, position: 'insideRight' }}
+            stroke="#FFFFFF" // Set YAxis line to white
+            tick={{ fill: '#FFFFFF' }} // Set YAxis ticks to white
+            label={{ value: 'ROR (°C/min)', angle: 90, position: 'insideRight', fill: '#FFFFFF' }} // Set YAxis label to white
           />
           {/* Third Y-axis for Fire and Airflow */}
           <YAxis
             yAxisId="controls"
             orientation="right"
-            stroke="#F59E0B"
-            tick={{ fill: '#F59E0B' }}
-            label={{ value: 'Fire/Airflow (%)', angle: 90, position: 'insideRight' }}
+            stroke="#FFFFFF" // Set YAxis line to white
+            tick={{ fill: '#FFFFFF' }} // Set YAxis ticks to white
+            label={{ value: 'Fire/Airflow (%)', angle: 90, position: 'insideRight', fill: '#FFFFFF' }} // Set YAxis label to white
             domain={[0, 100]}
           />
           <Tooltip
@@ -66,9 +66,9 @@ const RoastProfileChart = ({ roastData }) => {
               backgroundColor: '#1F2937',
               border: '1px solid #374151',
               borderRadius: '8px',
-              color: '#F9FAFB',
+              color: '#FFFFFF', // Set Tooltip content text to white
             }}
-            labelStyle={{ color: '#F9FAFB' }}
+            labelStyle={{ color: '#FFFFFF' }} // Set Tooltip label text to white
           />
           {/* Temperature lines */}
           <Line
@@ -100,19 +100,19 @@ const RoastProfileChart = ({ roastData }) => {
             name="Rate of Rise (ROR)"
           />
           {/* Fire and Airflow bars */}
-          <Bar
+          <Line
             yAxisId="controls"
-            dataKey="fire"
+            dataKey={(data) => data.fire * 100} // Scale 0-1 data to 0-100 for the axis
             fill="#F59E0B"
             name="Fire (%)"
-            opacity={0.7}
+            opacity={1}
           />
-          <Bar
+          <Line
             yAxisId="controls"
-            dataKey="airflow"
+            dataKey={(data) => data.airflow * 100} // Scale 0-1 data to 0-100 for the axis
             fill="#EF4444"
             name="Airflow (%)"
-            opacity={0.7}
+            opacity={1}
           />
         </ComposedChart>
       </ResponsiveContainer>
