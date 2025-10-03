@@ -40,9 +40,10 @@ export const newFeatures = [
 export const insights = [
   {
     imgUrl: '/planet-06.jpg',
-    title: 'Blend shot for better espresso',
+    title: 'Guess Yield for Pour Over',
     subtitle:
-        'Mathematical model combine with the coffee snob that produce an extraordinary espresso shot for the newest wave of espresso.',
+        'All of these things started when we finally get the information from our friends from Japan, called Kentaro-san. He introduce us the app called DiFluid, then we started to explore them about how we adjusting the independent variable (lately we already post about this, but confused about in- and dependent categorization) for pour-over method.',
+    link: 'https://medium.com/@arashifibra/can-we-guess-the-yield-from-pour-over-method-cc467180c557',
   },
   {
     imgUrl: '/planet-07.jpg',

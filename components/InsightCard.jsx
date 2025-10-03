@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
-const InsightCard = ({ index, imgUrl, title, subtitle }) => (
-  <motion.div
+const InsightCard = ({ index, imgUrl, title, subtitle, link }) => (
+  <motion.a
+    href={link || '#'}
+    target={link ? '_blank' : undefined}
+    rel={link ? 'noopener noreferrer' : undefined}
     variants={fadeIn('up', 'spring', index * 0.5, 1)}
     className="flex md:flex-row flex-col gap-4"
   >
@@ -19,7 +22,7 @@ const InsightCard = ({ index, imgUrl, title, subtitle }) => (
         <img src="arrow.svg" alt="arrow" className="w-[40%] h-[40%] object-contain" />
       </div>
     </div>
-  </motion.div>
+  </motion.a>
 );
 
 export default InsightCard;
