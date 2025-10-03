@@ -39,19 +39,19 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
+    imgUrl: '/planet-06.jpg',
     title: 'Blend shot for better espresso',
     subtitle:
         'Mathematical model combine with the coffee snob that produce an extraordinary espresso shot for the newest wave of espresso.',
   },
   {
-    imgUrl: '/planet-07.png',
+    imgUrl: '/planet-07.jpg',
     title: 'TDS control for better coffee',
     subtitle:
         'DiFluid can be your partner to looking for a better brew more easier.',
   },
   {
-    imgUrl: '/planet-08.png',
+    imgUrl: '/planet-08.jpg',
     title: 'Formula for the best Japanese Coffee',
     subtitle:
         'At least for our team :).',

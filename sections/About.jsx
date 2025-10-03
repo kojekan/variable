@@ -23,7 +23,7 @@ const About = () => (
 
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
+        className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-white"
       >
         <span className="font-extrabold"> Variable </span> is a new thing in the future, where you can predict more precisely, you can feel what you feel in this predictable world, because this is really the <span className="font-extrabold">madness of translation</span> of today, using only <span className="font-extrabold">VR</span> devices you can easily explore the unknown unknown into known unknown, turn your dream into reality. Let's <span className="font-extrabold">explore</span> the madness of each variable by scrolling down
       </motion.p>
