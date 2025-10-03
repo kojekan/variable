@@ -5,7 +5,7 @@ import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
+  <section className={`${styles.yPaddings} sm:pl-16 pl-6 relative z-10`}>
     <motion.div
       variants={staggerContainer}
       initial="hidden"
@@ -32,9 +32,9 @@ const Hero = () => (
 
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className="relative w-full lg:-mt-[30px] md:-mt-[18px] -mt-[15px]  2xl:pl-[280px]"
+        className="relative w-full lg:-mt-[16px] md:-mt-[12px] -mt-[8px] 2xl:pl-[280px]"
       >
-        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] sm:-top-[20px] -top-[10px]" />
+        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] sm:-top-[12px] -top-[6px]" />
         <img
           src="/cover.jpg"
           alt="cover"
@@ -42,7 +42,7 @@ const Hero = () => (
         />
 
         <a href="#explore">
-          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10 2xl:-ml-[100px]">
+          <div className="w-full flex justify-end sm:-mt-[60px] -mt-[44px] pr-[40px] relative z-10 2xl:-ml-[100px]">
             <motion.img
               src="/stamp.png"
               alt="stamp"

@@ -23,7 +23,7 @@ body::before {
   background-size: 200px 200px; /* Repeats the 200x200px noise pattern */
   opacity: 1; /* Adjust for desired intensity of the grain */
   mix-blend-mode: overlay; /* Blends the grain with the content below */
-  z-index: 9999; /* Ensures the grain is on top of other content */
+  z-index: 1; /* Keep grain above background but below UI */
 }
 
 .gradient-01 {
