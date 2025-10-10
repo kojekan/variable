@@ -25,7 +25,7 @@ const ExploreCard = ({
     className={`relative ${
       // 3. CORRECTED: Check if the current card's 'id' matches the 'active' state.
       active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-    } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
+    } flex items-center justify-center min-w-[170px] h-[800px] sm:h-[400px] md:h-[300px] lg:h-[700px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
     // 4. CORRECTED: Use the handleClick function passed from the parent component.
     onClick={() => handleClick(id)}
   >

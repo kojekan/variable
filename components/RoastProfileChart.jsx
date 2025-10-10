@@ -26,7 +26,7 @@ const RoastProfileChart = ({ roastData }) => {
   return (
     <motion.div
       variants={fadeIn('up', 'spring', 0.5, 0.75)}
-      className="w-full h-80"
+      className="w-full h-[100px] sm:h-[400px] md:h-[500px] lg:h-80"
     >
       <h3 className="text-white text-lg font-semibold mb-4">Roast Profile</h3>
       <ResponsiveContainer width="100%" height="100%">
@@ -35,30 +35,34 @@ const RoastProfileChart = ({ roastData }) => {
           <XAxis
             dataKey="time"
             stroke="#FFFFFF" // Set XAxis line to white
-            tick={{ fill: '#FFFFFF' }} // Set XAxis ticks to white
+            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set XAxis ticks to white with smaller font
+            tickLine={{ stroke: '#FFFFFF' }}
           />
           {/* Primary Y-axis for BT and ET temperatures */}
           <YAxis
             yAxisId="temp"
             stroke="#FFFFFF" // Set YAxis line to white
-            tick={{ fill: '#FFFFFF' }} // Set YAxis ticks to white
-            label={{ value: 'Temperature (°C)', angle: -90, position: 'insideLeft', fill: '#FFFFFF' }} // Set YAxis label to white
+            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set YAxis ticks to white with smaller font
+            tickLine={{ stroke: '#FFFFFF' }}
+            label={{ value: 'Temp (°C)', angle: -90, position: 'insideLeft', fill: '#FFFFFF', style: { fontSize: 12 } }} // Shorter label for mobile
           />
           {/* Secondary Y-axis for ROR */}
           <YAxis
             yAxisId="ror"
             orientation="right"
             stroke="#FFFFFF" // Set YAxis line to white
-            tick={{ fill: '#FFFFFF' }} // Set YAxis ticks to white
-            label={{ value: 'ROR (°C/min)', angle: 90, position: 'insideRight', fill: '#FFFFFF' }} // Set YAxis label to white
+            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set YAxis ticks to white with smaller font
+            tickLine={{ stroke: '#FFFFFF' }}
+            label={{ value: 'ROR', angle: 90, position: 'insideRight', fill: '#FFFFFF', style: { fontSize: 12 } }} // Shorter label for mobile
           />
           {/* Third Y-axis for Fire and Airflow */}
           <YAxis
             yAxisId="controls"
             orientation="right"
             stroke="#FFFFFF" // Set YAxis line to white
-            tick={{ fill: '#FFFFFF' }} // Set YAxis ticks to white
-            label={{ value: 'Fire/Airflow (%)', angle: 90, position: 'insideRight', fill: '#FFFFFF' }} // Set YAxis label to white
+            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set YAxis ticks to white with smaller font
+            tickLine={{ stroke: '#FFFFFF' }}
+            label={{ value: 'Controls (%)', angle: 90, position: 'insideRight', fill: '#FFFFFF', style: { fontSize: 12 } }} // Shorter label for mobile
             domain={[0, 100]}
           />
           <Tooltip
@@ -67,8 +71,11 @@ const RoastProfileChart = ({ roastData }) => {
               border: '1px solid #374151',
               borderRadius: '8px',
               color: '#FFFFFF', // Set Tooltip content text to white
+              fontSize: '12px', // Smaller font for mobile
+              padding: '8px', // Reduced padding for mobile
             }}
-            labelStyle={{ color: '#FFFFFF' }} // Set Tooltip label text to white
+            labelStyle={{ color: '#FFFFFF', fontSize: '12px' }} // Set Tooltip label text to white with smaller font
+            wrapperStyle={{ fontSize: '12px' }} // Smaller wrapper font
           />
           {/* Temperature lines */}
           <Line
