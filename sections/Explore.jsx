@@ -5,7 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../utils/supabaseClient'; // Adjust path as needed
 import ExploreCard from '../components/ExploreCard'; // Adjust path as needed
-import { getRoastProfile } from '../utils/dbService'; // Add roast profile service
+import { getRoastProfile, getBrewChart } from '../utils/dbService'; // Add services
 
 // A common initial state for the active card, often the first item's ID
 const initialActiveCardId = '2'; // Or whatever your first card's ID is
@@ -16,6 +16,7 @@ const ExploreSection = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [roastProfileData, setRoastProfileData] = useState([]);
+  const [brewChartData, setBrewChartData] = useState([]);
 
   // Function to fetch data from Supabase
   useEffect(() => {
@@ -60,17 +61,34 @@ const ExploreSection = () => {
     }
   };
 
+  const fetchBrewChart = async (beanId) => {
+    try {
+      const { data, error: brewError } = await getBrewChart({ beanId, limit: 200, orderBy: 'created_at', ascending: false });
+      if (brewError) {
+        console.error('Error fetching brew chart:', brewError);
+        setBrewChartData([]);
+      } else {
+        setBrewChartData(data);
+      }
+    } catch (err) {
+      console.error('Unexpected error fetching brew chart:', err);
+      setBrewChartData([]);
+    }
+  };
+
   // Load roast profile for the initially active card
   useEffect(() => {
     if (active && exploreWorlds.length > 0) {
       fetchRoastProfile(active);
+      fetchBrewChart(active);
     }
   }, [active, exploreWorlds]);
 
   const handleClick = (id) => {
     setActive(id);
-    // Fetch roast profile data when a card is clicked
+    // Fetch roast profile and brew chart data when a card is clicked
     fetchRoastProfile(id);
+    fetchBrewChart(id);
   };
 
   if (isLoading) return <div>Loading cards...</div>;
@@ -80,7 +98,7 @@ const ExploreSection = () => {
   return (
     <section className="paddings">
       {/* ... your section content, e.g., headings ... */}
-      <div className="flex lg:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="flex lg:flex-row flex-col min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] lg:min-h-[70vh] gap-5">
         {exploreWorlds.map((world, index) => (
           <ExploreCard
             key={world.id}
@@ -90,6 +108,7 @@ const ExploreSection = () => {
             active={active}
             handleClick={handleClick}
             roastData={active === world.id ? roastProfileData : []}
+            brewData={active === world.id ? brewChartData : []}
           />
         ))}
       </div>

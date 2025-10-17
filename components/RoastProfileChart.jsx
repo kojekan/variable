@@ -26,34 +26,34 @@ const RoastProfileChart = ({ roastData }) => {
   return (
     <motion.div
       variants={fadeIn('up', 'spring', 0.5, 0.75)}
-      className="w-full h-[100px] sm:h-[400px] md:h-[500px] lg:h-80"
+      className="w-full h-full min-h-[200px] sm:min-h-[300px]"
     >
-      <h3 className="text-white text-lg font-semibold mb-4">Roast Profile</h3>
+      <h3 className="text-white text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Roast Profile</h3>
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
           <XAxis
             dataKey="time"
-            stroke="#FFFFFF" // Set XAxis line to white
-            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set XAxis ticks to white with smaller font
+            stroke="#FFFFFF"
+            tick={{ fill: '#FFFFFF', fontSize: 8 }}
             tickLine={{ stroke: '#FFFFFF' }}
           />
           {/* Primary Y-axis for BT and ET temperatures */}
           <YAxis
             yAxisId="temp"
-            stroke="#FFFFFF" // Set YAxis line to white
-            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set YAxis ticks to white with smaller font
+            stroke="#FFFFFF"
+            tick={{ fill: '#FFFFFF', fontSize: 8 }}
             tickLine={{ stroke: '#FFFFFF' }}
-            label={{ value: 'Temp (°C)', angle: -90, position: 'insideLeft', fill: '#FFFFFF', style: { fontSize: 12 } }} // Shorter label for mobile
+            label={{ value: 'Temp (°C)', angle: -90, position: 'insideLeft', fill: '#FFFFFF', style: { fontSize: 8 } }}
           />
           {/* Secondary Y-axis for ROR */}
           <YAxis
             yAxisId="ror"
             orientation="right"
-            stroke="#FFFFFF" // Set YAxis line to white
-            tick={{ fill: '#FFFFFF', fontSize: 12 }} // Set YAxis ticks to white with smaller font
+            stroke="#FFFFFF"
+            tick={{ fill: '#FFFFFF', fontSize: 8 }}
             tickLine={{ stroke: '#FFFFFF' }}
-            label={{ value: 'ROR', angle: 90, position: 'insideRight', fill: '#FFFFFF', style: { fontSize: 12 } }} // Shorter label for mobile
+            label={{ value: 'ROR', angle: 90, position: 'insideRight', fill: '#FFFFFF', style: { fontSize: 8 } }}
           />
           {/* Third Y-axis for Fire and Airflow */}
           <YAxis

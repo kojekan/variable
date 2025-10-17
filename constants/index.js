@@ -42,20 +42,22 @@ export const insights = [
     imgUrl: '/planet-06.jpg',
     title: 'Guess Yield for Pour Over',
     subtitle:
-        'All of these things started when we finally get the information from our friends from Japan, called Kentaro-san. He introduce us the app called DiFluid, then we started to explore them about how we adjusting the independent variable (lately we already post about this, but confused about in- and dependent categorization) for pour-over method.',
+        'All of these things started when we finally get the information from our friends from Japan, called Kentaro-san.',
     link: 'https://medium.com/@arashifibra/can-we-guess-the-yield-from-pour-over-method-cc467180c557',
   },
   {
     imgUrl: '/planet-07.jpg',
-    title: 'TDS control for better coffee',
+    title: 'Different Roast Profile with the same Tasting Notes on Cipping, Is it possible?',
     subtitle:
-        'DiFluid can be your partner to looking for a better brew more easier.',
+        'This one is pure coincidence accident, when we try to make a different roast profile for the Liberica var dwerve that I got from our friend Mas Adi that planted at Karawang.',
+    link: 'https://medium.com/@arashifibra/different-roast-profile-with-the-same-tasting-notes-on-cipping-is-it-possible-f8caf9c5bc34',
   },
   {
     imgUrl: '/planet-08.jpg',
     title: 'Formula for the best Japanese Coffee',
     subtitle:
         'At least for our team :).',
+    link: 'variablexyz.netlify.app',
   },
 ];
 
