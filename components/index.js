@@ -7,6 +7,7 @@ import InsightCard from "./InsightCard";
 import Footer from "./Footer";
 import RoastProfileChart from "./RoastProfileChart";
 import BrewChart from "./BrewChart";
+import Japanese from "./Japanese";
 
 export {
   Navbar,
@@ -15,6 +16,7 @@ export {
   StartSteps,
   NewFeatures,
   ExploreCard,
+  Japanese,
   InsightCard,
   Footer,
   RoastProfileChart,

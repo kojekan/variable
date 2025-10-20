@@ -1,4 +1,4 @@
-import { Footer, Navbar } from "../components";
+import { Footer, Navbar, Japanese } from "../components";
 import {
   About,
   Explore,
@@ -21,6 +21,7 @@ const Page = () => (
       <div className="gradient-03 z-0" />
       <Explore />
     </div>
+    <Japanese />
 
     <div className="relative">
       <GetStarted />
