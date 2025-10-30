@@ -57,7 +57,7 @@ export const insights = [
     title: 'Formula for the best Japanese Coffee',
     subtitle:
         'At least for our team :).',
-    link: 'variablexyz.netlify.app',
+    link: 'https://medium.com/@arashifibra/japanese-conversion-from-your-v60-recipe-a3e6451f5710',
   },
 ];
 
