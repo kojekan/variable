@@ -7,9 +7,10 @@ import {
   Hero,
   Insights,
   WhatsNew,
-  World,
+  //World,
 } from "../sections";
-import Beans from "../components/Beans";
+
+// import Beans from "../components/Beans";
 
 const Page = () => (
   <div className="bg-primary-black overflow-hidden">

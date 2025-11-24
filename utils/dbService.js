@@ -1,19 +1,19 @@
 import { supabase } from './supabaseClient'; // Adjust path if needed
 
-export async function getBeans() {
-  const { data, error } = await supabase.from('beans_catalog').select('*');
+// export async function getBeans() {
+//   const { data, error } = await supabase.from('beans_catalogue').select('*').where('Online', 'eq', 'TRUE');
 
-  if (error) {
-    console.error(
-      '❌ Failed to connect or fetch from Supabase:',
-      error.message,
-    );
-    return { success: false, data: [], error: error.message };
-  }
+//   if (error) {
+//     console.error(
+//       '❌ Failed to connect or fetch from Supabase:',
+//       error.message,
+//     );
+//     return { success: false, data: [], error: error.message };
+//   }
 
-  console.log('✅ Successfully connected to Supabase and fetched data.');
-  return { success: true, data: data ?? [], error: null };
-}
+//   console.log('✅ Successfully connected to Supabase and fetched data.');
+//   return { success: true, data: data ?? [], error: null };
+// }
 
 export async function getRoastProfile(beanId) {
   const { data, error } = await supabase

@@ -51,7 +51,7 @@ const BrewChart = ({ data = [], target = DEFAULT_TARGET, selectedBrewId = null }
 
   return (
     <motion.div variants={fadeIn('up', 'spring', 0.2, 0.75)} className="w-full h-full min-h-[200px] sm:min-h-[300px]">
-      <h3 className="text-white text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Brew Chart (TDS vs Extraction)</h3>
+      <h3 className="text-white text-xs sm:text-sm font-semibold mb-1 sm:mb-2">Brew Chart</h3>
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart 
           margin={{ top: 4, right: 8, bottom: 4, left: 8 }}
